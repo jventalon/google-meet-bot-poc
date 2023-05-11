@@ -1,9 +1,10 @@
 import meet from './meet.js';
 
-let config = { 
-    meetingUrl: '', 
+const config = { 
+    meetingUrl: '',
     email: '', 
-    password: '' 
+    password: '',
+    audioCapture: true
 };
 
 (async () => {

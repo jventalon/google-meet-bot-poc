@@ -1,0 +1,28 @@
+{
+    "name": "Test",
+    "description": "A minimal Chrome extension for audio recording.",
+    "version": "1.0",
+    "icons": {
+        "128": "icon.png"
+    },
+    "manifest_version": 3,
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "background": {
+        "service_worker": "background.js",
+        "type": "module"
+    },
+    "sockets": {
+		"udp": { "send": ["*:*"], "bind": ["*:*"] }
+	},
+    "permissions": [
+        "activeTab",
+        "tabs",
+        "tabCapture",
+        "storage",
+        "scripting",
+        "sockets.udp"
+    ],
+    "host_permissions": ["*://*/*", "<all_urls>", "https://*/*", "http://*/*"]
+}
